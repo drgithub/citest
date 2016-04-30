@@ -130,7 +130,7 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <div class="row center">
-                    <h5 class="header col s12 lighten-5">Providing Software Development Solutions for SMEs to Industrial Companies.</h5>
+                    <h5 class="header col s12 lighten-5">Providing IT Solutions for a broad range of industries.</h5>
                 </div>
             </div>
         </div>
