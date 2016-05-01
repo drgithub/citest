@@ -27,19 +27,19 @@
         <!--Social Plugins-->
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="#" class="brand-logo right"><img src="assets/img/Dino.png" height="56px"></a>
+                <a id="logo-container" href="home" class="brand-logo right"><img src="assets/img/Dino.png" height="56px"></a>
                 <ul class="left hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home">Home</a></li>
                     <li><a href="web">Web Development</a></li>
-                    <li><a href="java">Mobile Development</a></li>
-                    <li><a href="graphics">Document Solutions</a></li>
+                    <li><a href="mobile">Mobile Development</a></li>
+                    <li><a href="doc">Document Solutions</a></li>
                     <li><a href="about">About</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home">Home</a></li>
                     <li><a href="web">Web Development</a></li>
-                    <li><a href="java">Mobile Development</a></li>
-                    <li><a href="graphics">Document Solutions</a></li>
+                    <li><a href="mobile">Mobile Development</a></li>
+                    <li><a href="doc">Document Solutions</a></li>
                     <li><a href="about">About</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -112,13 +112,13 @@
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
                     <h4>Contact Us</h4>
-                    <p class="left-align light">
+                    <!--<p class="left-align light">-->
                     <ul>
-                        <li class="chip"><a href="#inquire" onclick="checkmap()"><i class="material-icons">search</i>A. Mercado St., Magsaysay Heights, Poblacion Toledo City Cebu</a></li>
-                        <li class="chip"><i class="material-icons">phone</i>09322714080</li>
-                        <li class="chip"><i class="material-icons">email</i>drbendanillo@gmail.com</li>
+                        <li><a href="#inquire" class="red-text" onclick="checkmap()"><i class="material-icons">room</i>A. Mercado St., Magsaysay Heights, Poblacion Toledo City Cebu</a></li>
+                        <li><i class="material-icons tiny">phone</i>&nbsp;&nbsp;09322714080</li>
+                        <li><i class="material-icons tiny">email</i>&nbsp;&nbsp;drbendanillo@gmail.com</li>
                     </ul>
-                    </p>
+                    <!--</p>-->
                 </div>
             </div>
         </div
@@ -157,7 +157,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Copyright © 2016 <a class="brown-text text-lighten-5" href="https://linkedin.com/in/drbendanillo" target="_blank">Dino Rico B. Bendanillo</a>
+                Copyright © 2016 <a class="brown-text text-lighten-5" href="dummylink"  target="_blank">Dino Rico B. Bendanillo</a>
             </div>
         </div>
     </footer>
@@ -176,8 +176,12 @@
     <script type="text/javascript" src="assets/js/greensock-js/plugins/ScrollToPlugin.min.js"></script>
     <script>
         function inquireme() {
+            var tl =  new TimelineMax({onComplete:inquirehref}) ;
             var top = $("#inquire").offset().top;
-            TweenLite.to(window, 0.5, {scrollTo: {y: top}, ease: Back.easeOut});
+            tl.to(window, 0.5, {scrollTo: {y: top}, ease: Back.easeOut});
+        }
+        function inquirehref(){
+            window.location.href='#inquire';
         }
         function checkmap() {
             document.getElementById("gmap").style.pointerEvents = "auto";
