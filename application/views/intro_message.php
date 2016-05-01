@@ -112,8 +112,8 @@
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
                     <h4>Contact Us</h4>
-                    <p class="left-align light">
-                        <ul class="chip">
+                    <p class="left-align light chip">
+                        <ul>
                             <li><a href="#inquire" onclick="checkmap()"><i class="material-icons">search</i>A. Mercado St., Magsaysay Heights, Poblacion Toledo City Cebu</a></li>
                             <li><i class="material-icons">phone</i>09322714080</li>
                             <li><i class="material-icons">email</i>drbendanillo@gmail.com</li
@@ -142,7 +142,7 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">We are a team of self-proclaimed geeks.<br> We code, we eat, we play.</p>
+                    <p class="grey-text text-lighten-4">We are a team of IT professionals providing quality software solutions for your business needs.</br> We code, we eat, we play.</p>
                 </div>
                 <div class="col l3 s12">
                     <h5 class="white-text">Follow Us</h5>
