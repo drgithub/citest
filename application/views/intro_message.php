@@ -33,14 +33,14 @@
                     <li><a href="web">Web Development</a></li>
                     <li><a href="mobile">Mobile Development</a></li>
                     <li><a href="doc">Document Solutions</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="members">Members Portal</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="home">Home</a></li>
                     <li><a href="web">Web Development</a></li>
                     <li><a href="mobile">Mobile Development</a></li>
                     <li><a href="doc">Document Solutions</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="members">Members Portal</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -50,12 +50,12 @@
             <div class="section no-pad-bot">
                 <div class="container">
                     <br><br>
-                    <h1 class="header center white-text text-lighten-2">#1 IT Solutions & Development Company</h1>
-                    <div class="row center">
-                        <h5 class="header col s12 light">Innovative • Quick • Intuitive</h5>
-                    </div>
+                    <h1 class="header center white-text text-lighten-2">#1 IT Solutions Company</h1>
                     <div class="row center">
                         <div onclick="inquireme()" id="download-button" class="btn-large waves-effect waves-light red">Inquire Now!</div>
+                    </div>
+                    <div class="row center">
+                        <h5 class="header col s12 light">Innovative • Quick • Intuitive</h5>
                     </div>
                     <br><br>
 
@@ -176,12 +176,12 @@
     <script type="text/javascript" src="assets/js/greensock-js/plugins/ScrollToPlugin.min.js"></script>
     <script>
         function inquireme() {
-            var tl =  new TimelineMax({onComplete:inquirehref}) ;
+            var tl = new TimelineMax({onComplete: inquirehref});
             var top = $("#inquire").offset().top;
             tl.to(window, 0.5, {scrollTo: {y: top}, ease: Back.easeOut});
         }
-        function inquirehref(){
-            window.location.href='#inquire';
+        function inquirehref() {
+            window.location.href = '#inquire';
         }
         function checkmap() {
             document.getElementById("gmap").style.pointerEvents = "auto";

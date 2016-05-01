@@ -33,14 +33,14 @@
                     <li><a href="web">Web Development</a></li>
                     <li><a href="mobile">Mobile Development</a></li>
                     <li><a href="doc">Document Solutions</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="members">Members Portal</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="home">Home</a></li>
                     <li><a href="web">Web Development</a></li>
                     <li><a href="mobile">Mobile Development</a></li>
                     <li><a href="doc">Document Solutions</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="members">Members Portal</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -60,7 +60,7 @@
                     <br><br>
                 </div>
             </div>
-            <div class="parallax"><img src="assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
+            <div class="parallax"><img src="assets/img/undercon.jpg" alt="Unsplashed background img 1"></div>
         </div>
     <footer class="page-footer red">
         <div class="container">

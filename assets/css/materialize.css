@@ -4677,7 +4677,6 @@ small {
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   #toast-container {
-    left: 5%;
     bottom: 7%;
     max-width: 90%;
   }
@@ -4685,8 +4684,8 @@ small {
 
 @media only screen and (min-width: 993px) {
   #toast-container {
-    top: 10%;
-    right: 7%;
+    top: 0;
+    left: 30%;
     max-width: 86%;
   }
 }
@@ -4698,12 +4697,13 @@ small {
   clear: both;
   margin-top: 10px;
   position: relative;
-  max-width: 100%;
+  max-width: 70%;
+  min-width: 500px;
   height: auto;
   min-height: 48px;
   line-height: 1.5em;
   word-break: break-all;
-  background-color: #323232;
+  background-color: #f55;
   padding: 10px 25px;
   font-size: 1.1rem;
   font-weight: 300;
