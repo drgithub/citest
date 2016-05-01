@@ -55,7 +55,7 @@
                         <h5 class="header col s12 light">Innovative • Quick • Intuitive</h5>
                     </div>
                     <div class="row center">
-                        <div onclick="inquireme()" id="download-button" class="btn-large waves-effect waves-light red lighten-1">Inquire Now!</div>
+                        <div onclick="inquireme()" id="download-button" class="btn-large waves-effect waves-light red">Inquire Now!</div>
                     </div>
                     <br><br>
 
@@ -112,18 +112,18 @@
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
                     <h4>Contact Us</h4>
-                    <p class="left-align light chip">
-                        <ul>
-                            <li><a href="#inquire" onclick="checkmap()"><i class="material-icons">search</i>A. Mercado St., Magsaysay Heights, Poblacion Toledo City Cebu</a></li>
-                            <li><i class="material-icons">phone</i>09322714080</li>
-                            <li><i class="material-icons">email</i>drbendanillo@gmail.com</li
-                        </ul>
+                    <p class="left-align light">
+                    <ul>
+                        <li class="chip"><a href="#inquire" onclick="checkmap()"><i class="material-icons">search</i>A. Mercado St., Magsaysay Heights, Poblacion Toledo City Cebu</a></li>
+                        <li class="chip"><i class="material-icons">phone</i>09322714080</li>
+                        <li class="chip"><i class="material-icons">email</i>drbendanillo@gmail.com</li>
+                    </ul>
                     </p>
                 </div>
             </div>
         </div
     </div>
-    <iframe class="parallax-container valign-wrapper" onmouseout="disablemap()" id="gmap" onload="style.pointerEvents = 'none'" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.580297281672!2d123.63536441433415!3d10.37540396930566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9728d7425aae9%3A0x7b6fc80ef8b66371!2sMercado+St%2C+Toledo+City%2C+Cebu!5e0!3m2!1sen!2sph!4v1462006371950" width="100%" height="480" frameborder="0" style="border:0">
+    <iframe class="valign-wrapper" onmouseout="disablemap()" id="gmap" onload="style.pointerEvents = 'none'" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.580297281672!2d123.63536441433415!3d10.37540396930566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9728d7425aae9%3A0x7b6fc80ef8b66371!2sMercado+St%2C+Toledo+City%2C+Cebu!5e0!3m2!1sen!2sph!4v1462006371950" width="100%" height="640" frameborder="0" style="border:0">
     </iframe>
 
     <div class="parallax-container valign-wrapper">
@@ -147,7 +147,7 @@
                 <div class="col l3 s12">
                     <h5 class="white-text">Follow Us</h5>
                     <ul class="white-text left-align">
-                        <li >FaceBook <div class="fb-follow" data-href="https://www.facebook.com/drbendanillo" data-height="20" data-layout="button" data-show-faces="false"></div></a</li>
+                        <li>FaceBook <div class="fb-follow" data-href="https://www.facebook.com/drbendanillo" data-height="20" data-layout="button" data-show-faces="false"></div></a</li>
                         <li>Google+&nbsp;&nbsp;&nbsp;&nbsp;<div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/u/0/104125105329592399429" data-rel="author"></div></li>
                         <!--                        <li><a class="white-text" href="#!">Link 3</a></li>
                                                 <li><a class="white-text" href="#!">Link 4</a></li>-->
@@ -182,7 +182,7 @@
         function checkmap() {
             document.getElementById("gmap").style.pointerEvents = "auto";
             var top = $("#gmap").offset().top;
-            TweenLite.to(window, 0.7, {scrollTo: {y: top-30}, ease: Elastic.easeOut});
+            TweenLite.to(window, 0.7, {scrollTo: {y: top - 30}, ease: Elastic.easeOut});
         }
         function disablemap() {
             document.getElementById("gmap").style.pointerEvents = "none";
