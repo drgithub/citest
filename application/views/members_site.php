@@ -86,7 +86,7 @@
         <div class='row'>
             <div class="col s10 m6">
                 <div class="section" style="position: absolute;">
-                    <h1 class="grey-text text-darken-3" style="font-weight: bold;">Savings?<br>make it<br><span class="red-text text-accent-4" style="font-weight: bold">UNLIMITED</span>.</h1>
+                    <h1 class="grey-text text-darken-3" style="font-weight: bold;margin-top:0px;">Savings?<br>make it<br><span class="red-text text-accent-4" style="font-weight: bold">UNLIMITED</span>.</h1>
                 </div>
                 <img src="assets/img/tree.jpeg" width="100%" height="100%">
             </div>
