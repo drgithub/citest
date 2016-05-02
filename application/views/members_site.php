@@ -11,11 +11,11 @@
     </head>
 
     <body onload="Materialize.toast('<?php
-                    if (isset($this->session->userdata['user'])) {
-                        echo $this->session->userdata['user']['msg'];
-                        $this->session->unset_userdata('user');
-                    }
-                    ?>', 4000)">
+    if (isset($this->session->userdata['user'])) {
+        echo $this->session->userdata['user']['msg'];
+        $this->session->unset_userdata('user');
+    }
+    ?>', 4000)">
         <!--Social Plugins-->
         <div id="fb-root"></div>
         <script>(function (d, s, id) {
@@ -34,37 +34,39 @@
             <a id="logo-container" href="home" class="brand-logo left-align"><img src="assets/img/Dinosaur.png" class="circle" height="64px"></a>
             <div class="right nav-wrapper">
                 <div class="row white">
-                    <form class="right hide-on-med-and-down red-text">
+                    <form class="right hide-on-med-and-down red-text" action="login">
                         <div class="input-field col">
                             <i class="material-icons prefix">mail</i>
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" class="validate" required>
                             <label for="email">E-mail</label>
                         </div>
                         <div class="input-field col">
-                            <i class="material-icons prefix">lock</i>
-                            <input id="password" type="password" class="validate">
+                            <i class="material-icons prefix red-text">lock</i>
+                            <input id="password" type="password" class="validate" required>
                             <label for="password">Password</label>
                         </div>
-                        <button class="btn-flat waves-effect waves-light red white-text" type="submit" name="action">Log-In
+                        <button class="btn waves-effect waves-light red white-text" type="submit" name="action">Log-In
                             <i class="material-icons right">send</i>
                         </button>
                     </form>
                     <form class="side-nav" id="nav-mobile">
-                        <div class="row grey darken-3">
+                        <div class="row black-text">
                             <div class="input-field col">
-                                <i class="material-icons prefix">mail</i>
-                                <input id="email" type="email" class="validate">
+                                <i class="material-icons prefix red-text">mail</i>
+                                <input id="email" type="email" class="validate white-text" required>
                             </div>
                             <div class="input-field col">
-                                <i class="material-icons prefix">lock</i>
-                                <input id="password" type="password" class="validate">
+                                <i class="material-icons prefix red-text">lock</i>
+                                <input id="password" type="password" class="validate white-text" required>
                             </div>
-                            <button class="btn-large waves-effect waves-light red white-text center" type="submit" name="action">Log-In
-                                <i class="material-icons">send</i>
-                            </button>
+                            <div class="row grey darken-3">
+                                <button class="btn-large waves-effect waves-light red white-text right " type="submit" name="action">Log-In
+                                    <i class="material-icons">send</i>
+                                </button>
+                            </div>
                         </div>
                     </form>
-                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons red-text">menu</i></a>
                 </div>
             </div>
         </nav>
@@ -73,9 +75,9 @@
             <div class="section no-pad-bot">
                 <div class="container">
                     <br><br>
-                    <h1 class="header center white-text text-lighten-2">Welcome to Members Portal</h1>
+                    <h1 class="header center white-text text-lighten-2">DISC Members Portal</h1>
                     <div class="row center">
-                        <h5 class="header col s12 light">Get to know. Get updated.</h5>
+                        <h5 class="header col s12 light">Best Solution. Nothing Less.</h5>
                     </div>
                 </div>
             </div>
@@ -83,8 +85,8 @@
         </div>
         <div class='row'>
             <div class="col s10 m6">
-                <div class="section no-pad-bot" style="position: absolute">
-                    <h1 class="grey-text text-darken-3" style="font-weight: bold">Savings?<br>make it <span class="red-text text-darken-3" style="font-weight: bold">unlimited</span>.</h1>
+                <div class="section" style="position: absolute;">
+                    <h1 class="grey-text text-darken-3" style="font-weight: bold;">Savings?<br>make it<br><span class="red-text text-accent-4" style="font-weight: bold">UNLIMITED</span>.</h1>
                 </div>
                 <img src="assets/img/tree.jpeg" width="100%" height="100%">
             </div>
@@ -92,36 +94,36 @@
                 <form action="members/insert" method="post" >
                     <div class="row">
                         <div class="input-field col">
-                            <input name="fname" id="first_name" type="text" class="validate">
+                            <input name="fname" type="text" class="validate" required>
                             <label for="first_name">First Name</label>
                         </div>
                         <div class="input-field col">
-                            <input name="lname" id="last_name" type="text" class="validate">
+                            <input name="lname" type="text" class="validate" required>
                             <label for="last_name">Last Name</label>
                         </div>
                         <div class="input-field col">
-                            <input name="mname" id="last_name" type="text" class="validate">
-                            <label for="last_name">Middle Name</label>
+                            <input name="mname" type="text" class="validate" required>
+                            <label for="middle_name">Middle Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col" style="width: 550px">
-                            <input name="address" id="address" type="text" class="validate">
+                            <input name="address" type="text" class="validate" required>
                             <label for="address">Address</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col">
-                            <input name="email" id="email" type="email" class="validate">
+                            <input name="email" type="email" class="validate" required>
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field col">
-                            <input name="password" id="password" type="password" class="validate">
+                            <input name="password" type="password" class="validate" required>
                             <label for="password">Password</label>
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn waves-effect waves-light red centered" type="submit" name="action" >Register
+                        <button class="waves-effect waves-light red btn center-align" type="submit" name="action" style="margin-left:20%;margin-top: 10%;">Register
                             <i class="material-icons right">send</i>
                         </button>
                     </div>

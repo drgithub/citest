@@ -9,13 +9,14 @@ class user_model extends CI_Model {
     }
 
     function insert($data) {
+        $this->load->helper('security');
         $user = array(
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'mname' => $data['mname'],
             'address' => $data['address'],
             'email' => $data['email'],
-            'password' => $data['password']
+            'password' => do_hash($data['password'])
         );
         $result = $this->db->insert($this->table, $user);
 

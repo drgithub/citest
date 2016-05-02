@@ -6,10 +6,7 @@
             <file>file:/C:/xampp2/htdocs/citest/assets/css/materialize.css</file>
             <file>file:/C:/xampp2/htdocs/citest/application/config/routes.php</file>
             <file>file:/C:/xampp2/htdocs/citest/application/config/autoload.php</file>
-            <file>file:/C:/xampp2/htdocs/citest/application/models/user_model.php</file>
             <file>file:/C:/xampp2/htdocs/citest/application/config/config.php</file>
-            <file>file:/C:/xampp2/htdocs/citest/application/views/members_site.php</file>
-            <file>file:/C:/xampp2/htdocs/citest/application/controllers/Members.php</file>
         </group>
     </open-files>
 </project-private>
