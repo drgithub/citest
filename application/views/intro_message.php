@@ -42,7 +42,7 @@
                     <li><a href="doc">Document Solutions</a></li>
                     <li><a href="members">Members Portal</a></li>
                 </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons red-text">menu</i></a>
             </div>
         </nav>
 
