@@ -27,16 +27,16 @@
         <!--Social Plugins-->
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="home" class="brand-logo right"><img src="assets/img/Dino.png" height="56px"></a>
+                <a id="logo-container" href="./" class="brand-logo right"><img src="assets/img/Dino.png" height="56px"></a>
                 <ul class="left hide-on-med-and-down">
-                    <li><a href="home">Home</a></li>
+                    <li><a href="./">Home</a></li>
                     <li><a href="web">Web Development</a></li>
                     <li><a href="mobile">Mobile Development</a></li>
                     <li><a href="doc">Document Solutions</a></li>
                     <li><a href="members">Members Portal</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="home">Home</a></li>
+                    <li><a href="./">Home</a></li>
                     <li><a href="web">Web Development</a></li>
                     <li><a href="mobile">Mobile Development</a></li>
                     <li><a href="doc">Document Solutions</a></li>
@@ -55,7 +55,7 @@
                         <h5 class="header col s12 light">The page is on development or maintenance status.</h5>
                     </div>
                     <div class="row center">
-                        <a href="home" id="download-button" class="btn-large waves-effect waves-light red">Back to Home</a>
+                        <a href="./" id="download-button" class="btn-large waves-effect waves-light red">Back to Home</a>
                     </div>
                     <br><br>
                 </div>

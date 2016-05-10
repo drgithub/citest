@@ -1,3 +1,7 @@
+<?php
+$logined = isset($this->session->userdata['userlogin']);
+$registered = isset($this->session->userdata['notify']);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,13 +13,13 @@
         <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
-
     <body onload="Materialize.toast('<?php
-    if (isset($this->session->userdata['user'])) {
-        echo $this->session->userdata['user']['msg'];
-        $this->session->unset_userdata('user');
+    if ($registered) {
+        echo $this->session->userdata['notify']['msg'];
+        $this->session->unset_userdata('notify');
     }
     ?>', 4000)">
+
         <!--Social Plugins-->
         <div id="fb-root"></div>
         <script>(function (d, s, id) {
@@ -31,42 +35,16 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!--Social Plugins-->
         <nav class="red" role="navigation">
-            <a id="logo-container" href="home" class="brand-logo left-align"><img src="assets/img/Dinosaur.png" class="circle" height="64px"></a>
+            <a id="logo-container" href="./" class="brand-logo left-align"><img src="assets/img/Dinosaur.png" class="circle" height="64px"></a>
             <div class="right nav-wrapper">
                 <div class="row white">
-                    <form class="right hide-on-med-and-down red-text" action="login">
-                        <div class="input-field col">
-                            <i class="material-icons prefix">mail</i>
-                            <input id="email" type="email" class="validate" required>
-                            <label for="email">E-mail</label>
-                        </div>
-                        <div class="input-field col">
-                            <i class="material-icons prefix red-text">lock</i>
-                            <input id="password" type="password" class="validate" required>
-                            <label for="password">Password</label>
-                        </div>
-                        <button class="btn waves-effect waves-light red white-text" type="submit" name="action">Log-In
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </form>
-                    <form class="side-nav" id="nav-mobile">
-                        <div class="row black-text">
-                            <div class="input-field col">
-                                <i class="material-icons prefix red-text">mail</i>
-                                <input id="email" type="email" class="validate white-text" required>
-                            </div>
-                            <div class="input-field col">
-                                <i class="material-icons prefix red-text">lock</i>
-                                <input id="password" type="password" class="validate white-text" required>
-                            </div>
-                            <div class="row grey darken-3">
-                                <button class="btn-large waves-effect waves-light red white-text right " type="submit" name="action">Log-In
-                                    <i class="material-icons">send</i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons red-text">menu</i></a>
+                    <?php
+                    if ($logined) {
+                        require 'logoutform.php';
+                    } else {
+                        require 'loginform.php';
+                    }
+                    ?>
                 </div>
             </div>
         </nav>
@@ -91,43 +69,13 @@
                 <img src="assets/img/tree.jpeg" width="100%" height="100%">
             </div>
             <div class="col s12 m6">
-                <form action="members/insert" method="post" >
-                    <div class="row">
-                        <div class="input-field col">
-                            <input name="fname" type="text" class="validate" required>
-                            <label for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col">
-                            <input name="lname" type="text" class="validate" required>
-                            <label for="last_name">Last Name</label>
-                        </div>
-                        <div class="input-field col">
-                            <input name="mname" type="text" class="validate" required>
-                            <label for="middle_name">Middle Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col" style="width: 550px">
-                            <input name="address" type="text" class="validate" required>
-                            <label for="address">Address</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col">
-                            <input name="email" type="email" class="validate" required>
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="input-field col">
-                            <input name="password" type="password" class="validate" required>
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button class="waves-effect waves-light red btn center-align" type="submit" name="action" style="margin-left:20%;margin-top: 10%;">Register
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                </form>
+                <?php
+                if ($logined) {
+                    require 'userprofile.php';
+                } else {
+                    require 'regform.php';
+                }
+                ?>
             </div>
         </div>
         <footer class="page-footer red">
